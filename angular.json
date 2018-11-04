@@ -2,6 +2,7 @@
   "architect": {
     "build": {
       "options": {
+        "outputPath": "dist",
         "assets": [
           { "glob": "**/*", "input": "src/desktop/", "ignore": ["**.dev.js"], "output": "/" }
         ]
