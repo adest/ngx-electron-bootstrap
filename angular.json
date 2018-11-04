@@ -1,0 +1,11 @@
+{
+  "architect": {
+    "build": {
+      "options": {
+        "assets": [
+          { "glob": "**/*", "input": "src/desktop/", "ignore": ["**.dev.js"], "output": "/" }
+        ]
+      }
+    }
+  }
+}

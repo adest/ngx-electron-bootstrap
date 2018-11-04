@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "start": "concurrently \"ng serve\" \"npm run electron\"",
+    "electron": "electron ./src/desktop/electron.dev",
+    "package:win": "npm run build && cross-var electron-packager dist/app-name $npm_package_name-$npm_package_version --out=packages --platform=win32 --arch=all --overwrite ",
+    "package:linux": "npm run build && cross-var electron-packager dist/app-name $npm_package_name-$npm_package_version --out=packages --platform=linux --arch=all --overwrite ",
+    "package:osx": "npm run build && cross-var electron-packager dist/app-name $npm_package_name-$npm_package_version --out=packages --platform=darwin --arch=all --overwrite ",
+    "package:all": "npm run build && cross-var electron-packager dist/app-name $npm_package_name-$npm_package_version --out=packages --all --arch=all --overwrite "
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "cross-var": "^1.1.0",
+    "electron": "^3.0.7",
+    "electron-packager": "^12.2.0"
+  }
+}
